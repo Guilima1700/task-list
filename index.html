@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <main>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div class="card-tarefas" id="criarTarefa">
+            <h2>Criar tarefas</h2>
+            <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa">
+            <button id="addTaskButton">Adicionar Tarefa</button>
+            <button id="removeSelectedButton">Remover Selecionadas</button>
+        </div>
+
+        <div class="card-tarefas" id="emAberto" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="aberto">Em aberto</h2>
+            <ul id="taskListEmAberto" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+            <div id="taskCountEmAberto">Total de Tarefas: 0</div>
+        </div>
+
+        <div class="card-tarefas" id="bid" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="bid">Bid (negociação)</h2>
+            <ul id="taskListBid" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+            <div id="taskCountBid">Total de Tarefas: 0</div>
+        </div>
+
+        <div class="card-tarefas" id="emAndamento" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="andamento">Em andamento</h2>
+            <ul id="taskListEmAndamento" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+            <div id="taskCountEmAndamento">Total de Tarefas: 0</div>
+        </div>
+
+        <div class="card-tarefas" id="entregue" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="entregue">Entregue</h2>
+            <ul id="taskListEntregue" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+            <div id="taskCountEntregue">Total de Tarefas: 0</div>
+        </div>
+
+    </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
